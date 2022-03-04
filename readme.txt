@@ -1,3 +1,5 @@
+ALL METRO is a small business located in Piracicaba - Brazil. They offer training, consulting, calibration, maintenance, and sales of residential and commercial scales. The website was developed to make a strong and lasting impression towards current and future clients.
+
 -------------------------------------------------------------------------------------------------------
 
 SOURCES AND CREDITS:

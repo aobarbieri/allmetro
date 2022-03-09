@@ -2464,8 +2464,6 @@ label>input[type="radio"] {
     padding: 2rem;
 }
 
-    {}
-
 .modal__content form textarea {
     min-height   : 20rem;
     margin-bottom: 3rem;
@@ -4977,7 +4975,7 @@ html.no-csstransitions .s-hero__content {
 .s-contact__email {
     margin-top    : var(--vspace-1_5);
     font-family   : var(--font-2);
-    font-size     : calc(var(--text-size) * 6.6);
+    font-size     : var(--text-size);
     font-weight   : 500;
     letter-spacing: -0.01em;
     line-height   : 1;
@@ -5000,13 +4998,13 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
     .s-contact__email {
-        font-size: calc(var(--text-size) * 6);
+        font-size: calc(var(--text-size) * 4);
     }
 }
 
 @media screen and (max-width: 1200px) {
     .s-contact__email {
-        font-size: 10vw;
+        font-size: calc(var(--text-size) * 1.4);
     }
 }
 
@@ -5240,5 +5238,15 @@ html.no-csstransitions .s-hero__content {
 
     .ss-copyright {
         font-size: 1.4rem;
+    }
+}
+
+@keyframes fade-slide-in {
+    from {
+        transform: translateY(-5rem);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }

@@ -1,5 +1,6 @@
 const backdrop = document.getElementById('backdrop');
 const contactBtn = document.querySelector('.contact-btn');
+const ftrContactBtn = document.querySelector('.ftr-contact-btn');
 const showModal = document.getElementById('add-modal');
 
 /* Backdrop and Contact Modal */
@@ -19,3 +20,4 @@ const backdropClickHandler = () => {
 
 backdrop.addEventListener('click', backdropClickHandler);
 contactBtn.addEventListener('click', showContactModal);
+ftrContactBtn.addEventListener('click', showContactModal);

@@ -1,89 +1,3 @@
-/* =================================================================== 
- * Flare Main Stylesheet
- * Template Ver. 1.0.0
- * 03-19-2020
- * ------------------------------------------------------------------
- *
- * TOC:
- * # settings and variables
- *      ## fonts
- *      ## colors
- *      ## vertical spacing and typescale
- *      ## grid variables
- * # normalize
- * # basic/base setup styles
- *      ## media
- *      ## typography resets
- *      ## links
- *      ## inputs
- * # Grid v3.0.0
- *      ## medium screen devices
- *      ## tablets
- *      ## mobile devices
- *      ## small mobile devices <= 400px
- * # block grids
- *      ## block grids - medium screen devices
- *      ## block grids - tablets
- *      ## block grids - mobile devices
- *      ## block grids - small mobile devices <= 400px
- * # MISC
- * # custom grid, block grid STACK breakpoints 
- * # base style overrides
- *      ## links
- * # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- * # preloader
- * # forms 
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # buttons
- * # additional components
- *      ## additional typo styles
- *      ## skillbars
- *      ## alert box
- * # common and reusable styles
- *      ## item list 
- *      ## slick slider 
- * # site header
- *      ## header logo
- *      ## main navigation
- *      ## mobile menu toggle
- *      ## header contact button
- * # hero
- *      ## hero content
- *      ## hero video
- *      ## hero scroll
- *      ## animate intro content
- *      ## animations
- * # about
- *      ## about photo
- *      ## about process
- * # services
- * # portfolio
- *      ## portfolio list
- * # clients
- *      ## clients slider
- *      ## testimonials
- * # contact
- * # footer
- *      ## footer block
- *      ## footer list
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
-
-
-
-/* ===================================================================
- * # settings and variables
- *
- * ------------------------------------------------------------------- */
-
 /* ------------------------------------------------------------------- 
  * ## fonts
  * ------------------------------------------------------------------- */
@@ -2188,10 +2102,7 @@ figcaption,
 ul,
 ol,
 dl,
-form,
 fieldset,
-input,
-textarea,
 select,
 button,
 .btn,
@@ -2424,7 +2335,6 @@ select {
     --input-vpadding   : calc(((var(--input-height) - var(--input-line-height)) / 2) - .1rem);
 
     display           : block;
-    height            : var(--input-height);
     padding           : var(--input-vpadding) calc(2.4rem - .1rem);
     border            : 0;
     outline           : none;
@@ -2484,9 +2394,6 @@ select {
     transform               : rotate(45deg);
 }
 
-textarea {
-    min-height: calc(8 * var(--space));
-}
 
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -2531,6 +2438,86 @@ label>input[type="radio"] {
     margin  : 0;
     position: relative;
     top     : .2rem;
+}
+
+.modal {
+    position: fixed;
+    z-index : 900;
+
+    top        : 50%;
+    left       : 50%;
+    height     : 600px;
+    width      : 80%;
+    margin-top : -300px;
+    /* Negative half of height. */
+    margin-left: -40%;
+    /* Negative half of width. */
+    padding    : 0;
+
+    background-color: #14171B;
+    border-radius   : 10px;
+    box-shadow      : 0 2px 8px rgba(0, 0, 0, 0.26);
+    display         : none;
+}
+
+.modal__content {
+    padding: 2rem;
+}
+
+    {}
+
+.modal__content form textarea {
+    min-height   : 20rem;
+    margin-bottom: 3rem;
+}
+
+.modal__content h3,
+.modal__content form label,
+.modal__content section {
+    margin: 0 0 1rem;
+}
+
+.modal__content form input,
+.modal__content form textarea,
+.modal__content button {
+    width: 100%;
+}
+
+
+
+.modal.visible {
+    display  : block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+#backdrop {
+    position      : fixed;
+    width         : 100%;
+    height        : 100vh;
+    top           : 0;
+    left          : 0;
+    background    : rgba(0, 0, 0, 0.75);
+    z-index       : 800;
+    pointer-events: none;
+    display       : none;
+}
+
+#backdrop.visible {
+    display       : block;
+    pointer-events: all;
+}
+
+@media screen and (min-width: 800px) {
+    .modal {
+        width      : 60%;
+        height     : 650px;
+        margin-left: -30%;
+        margin-top : -325px;
+    }
+
+    .modal__content {
+        padding: 4rem;
+    }
 }
 
 

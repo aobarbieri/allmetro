@@ -16,7 +16,7 @@
     <!-- script  -->
     <script src="js/modernizr.js"></script>
     <script defer src="js/fontawesome/all.min.js"></script>
-
+    <script defer src="js/contact.js"></script>
 </head>
 
 <body id="top">
@@ -29,6 +29,30 @@
         </div>
     </div>
 
+    <!-- modal, visible on click -->
+    <div id="backdrop"></div>
+    <section class="modal row" id="add-modal">
+        <section class="modal__content" >
+            <h3>Contato</h3>
+            <form>
+                    <section>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="test@mailbox.com" id="email">
+                    </section>
+                    <section>
+                        <label for="name">Nome</label>
+                        <input type="text" placeholder="Seu Nome" id="name">
+                    </section>
+                    
+                    <label for="message">Mensagem</label>
+                    <textarea placeholder="Sua Mensagem" id="mensagem"></textarea>
+                
+                </form>
+                <button class="btn--primary">Enviar Mensagem</button>
+        </section>
+    </section>
+    
+    
 
     <!-- header -->
     <header class="s-header">
@@ -50,10 +74,10 @@
                 </ul>
             </nav>
 
-            <a href="mailto:#0" class="btn btn--primary btn--small">
+            <button class="btn btn--primary btn--small contact-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
                 Contato
-            </a>
+            </button>
         </section> 
 
         <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
@@ -125,17 +149,20 @@
                 <p class="lead" data-aos="fade-up">
                     Fazemos isso <strong>entendendo cada uma das suas necessidades e entregando soluções completas</strong>, desde serviços de manutenção e calibração, vendas de equipamentos, treinamentos de boas práticas e de medições, consultorias e gestões completas.
                 </p>
-                <p class="lead" data-aos="fade-up">
-                    Dessa forma, você tem a certeza que seus instrumentos de medição estão sempre prontos e qualificados para o trabalho.
-                </p>
-                <p class="lead" data-aos="fade-up">
-                    Nosso sistema de gestão da qualidade está em conformidade com a Norma NBR ISO/IEC 17025/2017 e com a Portaria INMETRO nº 236.
-                </p>
+                
             </article>
 
             <section class="column large-6 w-900-stack s-about__photo-block">
                 <section class="s-about__photo" data-aos="fade-up"></section>
             </section>
+
+            <article class='column large-12 w-900-stack'>
+                <p class="lead" data-aos="fade-up">
+                    Dessa forma, você tem a certeza que seus instrumentos de medição estão sempre prontos e qualificados para o trabalho. Nosso sistema de gestão da qualidade está em conformidade com a Norma NBR ISO/IEC 17025/2017 e com a Portaria INMETRO nº 236.
+                </p>
+            </article>
+
+            
         </article>
 
         <article class="row block-large-1-3 block-tab-full s-about__process item-list">
@@ -384,97 +411,20 @@
                 </div> <!-- end column -->
             </div> <!-- end clients-outer -->
 
-            <div class="row testimonials collapse">
-
-                <div class="column large-12">
-
-                    <div class="testimonial-slider" data-aos="fade-up">
-
-                        <div class="testimonial-slider__slide">
-                            <p>
-                            Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
-                            Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                            Laudantium quia consequatur molestias delectus culpa.
-                            </p>
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Tim Cook</strong>
-                                    <span>CEO, Apple</span>
-                                </cite>
-                            </div>
-                        </div> <!-- end testimonials__slide -->
-        
-                        <div class="testimonial-slider__slide">
-                            <p>
-                            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                            Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                            Quasi voluptas eius distinctio. Atque eos maxime.
-                            </p>
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Sundar Pichai</strong>
-                                    <span>CEO, Google</span>
-                                </cite>
-                            </div>
-                        </div> <!-- end testimonials__slide -->
-        
-                        <div class="testimonial-slider__slide">
-                            <p>
-                            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                            Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                            Voluptatem dignissimos ut.
-                            </p>
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Satya Nadella</strong>
-                                    <span>CEO, Microsoft</span>
-                                </cite>
-                            </div>
-                        </div> <!-- end testimonials__slide -->
-        
-                        <div class="testimonial-slider__slide">
-                            <p>
-                            Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                            quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
-                            Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                            </p>
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Jeff Bezos</strong>
-                                    <span>CEO, Amazon</span>
-                                </cite>
-                            </div>
-                        </div> <!-- end testimonials__slide -->
-
-                    </div> <!-- end testimonial slider -->
-                    
-                </div> <!-- end column -->
-
-            </div> <!-- end row -->
         </section> <!-- end s-clients -->
 
     </section> <!-- end s-portfolio -->
 
 
-  
-    
-
-
-    <!-- contact
-    ================================================== -->
+    <!-- contact -->
     <section class="s-contact">
 
         <div class="row narrower s-contact__top h-text-center">
             <div class="column">
-                <h3 class="h6">Get In Touch</h3>
+                <h3 class="h6">Teremos o prazer em te atender!
+                </h3>
                 <h1 class="display-1">
-                Have an idea or an epic project in mind? Talk to
-                us. Let us work together and make something great.
-                Shoot us a message at
+                Tem uma otima idea ou um projeto top em mente? Fale com a gente. Vamos trabalhar juntos e fazer algo ótimo. Nos envie uma mensagem no
                 </h1>
             </div>
         </div> <!-- s-footer__top -->
@@ -482,7 +432,7 @@
         <div class="row h-text-center">
             <div class="column">
                 <p class="s-contact__email">
-                    <a href="mailto:#0">hello@flare.com</a>
+                    <a href="mailto:comercia@allmetro.com.br">comercial@allmetro.com.br</a>
                 </p>
             </div>
         </div>
